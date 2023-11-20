@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function Header() {
   const [hour, setHour] = useState(new Date().toLocaleTimeString());
+  const { push } = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
@@ -13,7 +15,10 @@ export function Header() {
 
   return (
     <div className="w-full h-20 bg-white flex flex-row border-b">
-      <div className="flex-1 flex items-center justify-center flex-row gap-2">
+      <div
+        className="flex-1 flex items-center justify-center flex-row gap-2 hover:cursor-pointer"
+        onClick={() => push("/dashboard")}
+      >
         <Image src="/logo_govbr.png" alt="Logo" width={50} height={50} />
         <h1 className="text-2xl text-blue-900 font-bold">Conecta Saúde</h1>
       </div>

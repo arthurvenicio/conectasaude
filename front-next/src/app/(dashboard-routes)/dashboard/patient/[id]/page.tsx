@@ -1,9 +1,9 @@
-"use client";
-import { PatientConsultation } from "@/components/PatientConsultation/PatientConsultation";
-import { PatientExam } from "@/components/PatientExam/PatientExam";
-import { PatientInformation } from "@/components/PatientInformation/PatientInformation";
-import { TabSelected } from "@/enums/tabselected-enum";
-import { useState } from "react";
+'use client';
+import { PatientConsultation } from '@/components/PatientConsultation/PatientConsultation';
+import { PatientExam } from '@/components/PatientExam/PatientExam';
+import { PatientInformation } from '@/components/PatientInformation/PatientInformation';
+import { TabSelected } from '@/enums/tabselected-enum';
+import { useState } from 'react';
 
 export default function PatientPage() {
   const [tabSelected, setTabSelected] = useState(TabSelected.INFORMATION);
@@ -22,8 +22,8 @@ export default function PatientPage() {
           <button
             className={`flex-1 border-r hover:bg-slate-50 font-medium ${
               tabSelected === TabSelected.INFORMATION
-                ? "bg-gray-100"
-                : "text-gray-500"
+                ? 'bg-gray-100'
+                : 'text-gray-500'
             }`}
             onClick={() => setTabSelected(TabSelected.INFORMATION)}
           >
@@ -31,7 +31,7 @@ export default function PatientPage() {
           </button>
           <button
             className={`flex-1 border-r hover:bg-slate-50 font-medium ${
-              tabSelected === TabSelected.EXAM ? "bg-gray-100" : "text-gray-500"
+              tabSelected === TabSelected.EXAM ? 'bg-gray-100' : 'text-gray-500'
             }`}
             onClick={() => setTabSelected(TabSelected.EXAM)}
           >
@@ -40,8 +40,8 @@ export default function PatientPage() {
           <button
             className={`flex-1 border-r hover:bg-slate-50 font-medium ${
               tabSelected === TabSelected.CONSULTATION
-                ? "bg-gray-100"
-                : "text-gray-500"
+                ? 'bg-gray-100'
+                : 'text-gray-500'
             }`}
             onClick={() => setTabSelected(TabSelected.CONSULTATION)}
           >

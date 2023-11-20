@@ -1,5 +1,6 @@
 "use client";
-import { cpfMask } from "@/utils/maks";
+import { cpfMask, onlyNumbers } from "@/utils/maks";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -14,8 +15,17 @@ export function SearchUser() {
     formState: { errors },
   } = useForm<FormData>();
   const [document, setDocument] = useState<string>("");
+  const { push } = useRouter();
+
+  const handleOnSearch = (data: FormData) => {
+    push(`/dashboard/patient/${onlyNumbers(data.document)}`);
+  };
+
   return (
-    <form className="flex flex-col gap-4 items-center justify-centers">
+    <form
+      className="flex flex-col gap-4 items-center justify-centers"
+      onSubmit={handleSubmit(handleOnSearch)}
+    >
       <div>
         <input
           type="text"
