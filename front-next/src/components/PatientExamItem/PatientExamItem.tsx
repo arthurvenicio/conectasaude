@@ -13,7 +13,7 @@ export function PatientExamItem({ exam }: PatientExamItemProps) {
         <p className="text-sm font-normal">Data: {date}</p>
       </div>
       <div className="flex-1 flex flex-row gap-3 items-center">
-        <p className="text-md font-medium">Medico solicitante:</p>
+        <p className="text-md font-medium">Médico solicitante:</p>
         <p className="text-md font-normal">{requestingDoctor.name}</p>
       </div>
     </div>

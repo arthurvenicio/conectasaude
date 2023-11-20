@@ -16,7 +16,7 @@ export function PatientConsultationItem({
         <p className="text-sm font-normal">Data: {date}</p>
       </div>
       <div className="flex-1 flex flex-row gap-3 items-center">
-        <p className="text-md font-medium">Medico:</p>
+        <p className="text-md font-medium">Médico:</p>
         <p className="text-md font-normal">{responsibleDoctor.name}</p>
       </div>
     </div>
