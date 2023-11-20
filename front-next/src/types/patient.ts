@@ -14,3 +14,11 @@ export interface Doctor {
   crmUf: string;
   document: string;
 }
+
+export interface PatientConsultation {
+  id: string;
+  patientId: string;
+  responsibleDoctor: Doctor;
+  date: string;
+  unit: string;
+}
